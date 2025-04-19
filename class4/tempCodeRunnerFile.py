@@ -1,11 +1,7 @@
-import turtle as t
-
-t.penup()  #提筆,這樣就不會畫線但是可以移動
-t.color("red")  #設定顏色為紅色
-t.shape("turtle")  #設定形狀為烏龜
-for i in range(120):
-    t.forward(20)
-    t.stamp()#蓋一個印章
-    t.right(6)  
-
-t.done()
+n = int(input("請輸入要印出的箭頭大小:"))
+for i in range(1, n + 1):
+    print(f" " * (n - i) + "*" * (2 * i - 1))  # 上半部分
+    # 如何把i=1,2,3變成 2, 1, 0==>n-i==>這個可以拿來畫空格
+    # 如何把i=1,2,3變成 1, 3, 5==>2*i-1==>這個可以拿來畫星星
+for i in range(1, n + 1):
+    print(f" " * (n - 1) + "*")

@@ -18,7 +18,30 @@ EX:
 體重過重
 """
 
+h = float(input("請輸入身高:"))
+w = float(input("請輸入體重:"))
+bmi = w / h**2
+print("你的BMI為", bmi)
+if bmi < 14.8:
+    print("體重過輕")
+elif bmi > 20.7:
+    print("體重過重")
+else:
+    print("體重正常")
+
 """
 使用turtle模組+for迴圈
 蓋出螺旋狀的印章
 """
+
+import turtle as t
+
+t.color("red")  # 設定顏色為紅色
+t.shape("turtle")  # 設定形狀為烏龜
+t.penup()  # 提筆,這樣就不會畫線但是可以移動
+for step in range(5, 151, 2):
+    t.stamp()  # 蓋一個印章
+    t.forward(step)  # 向前移動
+    t.right(25)
+    print(step)
+t.done()

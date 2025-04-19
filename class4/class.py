@@ -79,3 +79,42 @@ for i in range(120):
     t.right(6)
 
 t.done()
+
+
+import turtle as t
+import time
+
+t.speed(0)
+for j in range(60):
+    t.right(6 * j)
+    t.forward(80)
+    time.sleep(1)
+    t.home()
+    t.left(90)
+    t.clear()
+
+t.done()
+
+
+import time
+
+n = int(input("請輸入正整數: "))
+for i in range(1, n + 1):
+    if i % 3 == 0 or i % 7 == 0:
+        print(i)
+
+
+"""
+EX:
+請輸入要印出的箭頭:3
+  *
+ ***
+*****
+"""
+n = int(input("請輸入要印出的箭頭大小:"))
+for i in range(1, n + 1):
+    print(f" " * (n - i) + "*" * (2 * i - 1))  # 上半部分
+    # 如何把i=1,2,3變成 2, 1, 0==>n-i==>這個可以拿來畫空格
+    # 如何把i=1,2,3變成 1, 3, 5==>2*i-1==>這個可以拿來畫星星
+for i in range(1, n + 1):
+    print(f" " * (n - 1) + "*")
