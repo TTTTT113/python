@@ -16,11 +16,19 @@ EX：
 47
 """
 
-f = int(input("請輸入一個整數:"))
-a = "是質數"
-for i in range(2, f):
-    if f % i == 0:  # 輸入的數字除以會圈變數,接著拿餘數來判斷是不是0
-        # 如果是0,則不是質數
-        a = "不是質數"
+start = int(input("請輸入開始整數:"))
+end = int(input("請輸入結束整數:"))
 
-print(f"{f} {a}")
+#依序檢查從 start 到 end (包含end)的每一個整數
+for n in range(start, end + 1):
+    #質數必須大於1
+    if n > 1:
+        ans = "是質數" #先假設這個數是質數
+        #檢查是否存除了 1 和次己以外的整數能整除
+        for i in range(2, n):
+            if n % i == 0: #如果可以整除，代表不是質數
+                ans = "不是質數"
+ #如果整個檢察完都沒被改變成不是質數，就印出這個數              
+        if ans =="是質數"
+            print(n)
+
