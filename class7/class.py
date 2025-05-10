@@ -38,6 +38,3 @@ for i in range(s, -1, -1):
     time.sleep(1)
 else:
     print("時間到")
-
-
-# while

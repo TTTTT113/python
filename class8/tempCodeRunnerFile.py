@@ -1,7 +1,17 @@
-jump = int(input("請輸入跳繩的次數"))
-# 跳繩
-for i in range(1, jump + 1):
-    if i % 10 == 0:
-        print("休息一下")
-        continue
-    print(f"第{i}次的跳繩")
+while True:
+    print("1.蘋果汁")
+    print("2.柳橙汁")
+    print("3.葡萄汁")
+    print("4.系統關閉")
+    n = input("請輸入編號")
+    if n == "1":
+        print("蘋果汁")
+    elif n == "2":
+        print("柳橙汁")
+    elif n == "3":
+        print("葡萄汁")
+    elif n == "4":
+        print("系統關閉")
+        break
+    else:
+        print("查無此項目")
