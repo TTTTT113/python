@@ -4,7 +4,7 @@ print("===水果店價格查詢系統===")
 while True:
 
     print("目前水果價格")
-    for fruit, price in f.items():
+    for fruit, price in fruit.items():
         print(f"{fruit}: {price}元")
 
     print("1.新增水果價格")
@@ -20,7 +20,7 @@ while True:
         if fruit_name in fruit:
             print("水果已存在")
         else:
-            price = input("請輸入該水果的價格: ")
+            price = int(input(f"請輸入{fruit_name}的價格"))
             fruit[fruit_name] = price
             print(f"{fruit_name}已新增,價格{price}元")
     elif choice == "2":
